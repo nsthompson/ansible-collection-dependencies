@@ -54,7 +54,7 @@ collections:
 
 ## Requirements
 
-* Requires Python 3.7+
+* Tested with Python 3.8.5
 
 ### Installing Python Requirements
 
