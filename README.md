@@ -15,11 +15,13 @@ playbook-parser.py /development/playbooks/aci_demo_create.yml
 ```
 
 **Example 1 Output:**
+
 ```yaml
 # Play 1
 collections:
   - cisco.aci
 ```
+
 **Example 2:**
 
 ```shell
@@ -27,6 +29,7 @@ playbook-parser.py /development/playbooks/cisco_wlc/aireos_show_ap_summary_demo.
 ```
 
 **Example 2 Output:**
+
 ```yaml
 # Play 1
 collections:
@@ -35,20 +38,20 @@ collections:
 
 ## Components
 
-**playbook-parser.py**
+### playbook-parser.py
 
 * Utility to parse ansible playbooks and generate required collections
 
-**lib/ansible_builtin_runtime.yml**
+### lib/ansible_builtin_runtime.yml
 
-* This file is sourced from https://github.com/ansible/ansible/blob/stable-2.10/lib/ansible/config/ansible_builtin_runtime.yml
+* This file is sourced from <https://github.com/ansible/ansible/blob/stable-2.10/lib/ansible/config/ansible_builtin_runtime.yml>
 * To update this file do the following:
   
   ```shell
   wget https://raw.githubusercontent.com/ansible/ansible/stable-2.10/lib/ansible/config/ansible_builtin_runtime.yml
   ```
 
-**lib/runtime.py**
+### lib/runtime.py
 
 * Python class for parsing and searching the ansible_builtin_runtime.yml file
 
