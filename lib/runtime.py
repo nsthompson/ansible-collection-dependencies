@@ -7,6 +7,7 @@
 #
 
 import os
+import sys
 import yaml
 
 
@@ -18,8 +19,12 @@ class LoadRuntime:
 
         basepath = os.path.dirname(os.path.abspath(__file__))
 
-        with open(f'{basepath}/ansible_builtin_runtime.yml') as runtime_file:
-            self.runtime_info = yaml.load(runtime_file, Loader=yaml.SafeLoader)
+        try:
+            with open(f'{basepath}/ansible_builtin_runtime.yml') as runtime_file:
+                self.runtime_info = yaml.load(runtime_file, Loader=yaml.SafeLoader)
+        except FileNotFoundError:
+            print("Runtime File Missing!")
+            sys.exit(1)
 
     def get_module_fqcn(self, module_name):
         try:

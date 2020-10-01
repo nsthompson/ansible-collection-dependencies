@@ -16,6 +16,7 @@ playbook-parser.py /development/playbooks/aci_demo_create.yml
 
 **Example 1 Output:**
 ```yaml
+# Play 1
 collections:
   - cisco.aci
 ```
@@ -27,6 +28,7 @@ playbook-parser.py /development/playbooks/cisco_wlc/aireos_show_ap_summary_demo.
 
 **Example 2 Output:**
 ```yaml
+# Play 2
 collections:
   - community.network
 ```
@@ -49,6 +51,16 @@ collections:
 **lib/runtime.py**
 
 * Python class for parsing and searching the ansible_builtin_runtime.yml file
+
+## Requirements
+
+* Requires Python 3.7+
+
+### Installing Python Requirements
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Contributors
 
