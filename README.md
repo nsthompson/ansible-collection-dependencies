@@ -28,7 +28,7 @@ playbook-parser.py /development/playbooks/cisco_wlc/aireos_show_ap_summary_demo.
 
 **Example 2 Output:**
 ```yaml
-# Play 2
+# Play 1
 collections:
   - community.network
 ```
