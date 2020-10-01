@@ -85,8 +85,11 @@ def main():
     # Dump YAML of new collections
     for key in collections.keys():
         print(f'# Play {key}')
-        yaml.indent(mapping=2, sequence=4, offset=2)
-        yaml.dump(collections[key], sys.stdout)
+        if collections[key]['collections'] == []:
+            print("No Collection Updates Required!")
+        else:
+            yaml.indent(mapping=2, sequence=4, offset=2)
+            yaml.dump(collections[key], sys.stdout)
 
 
 if __name__ == "__main__":
